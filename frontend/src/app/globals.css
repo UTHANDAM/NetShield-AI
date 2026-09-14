@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0b1712;
+  --foreground: #e8f1e9;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+.landing-shell { background: radial-gradient(circle at 80% 0%, #294d3d 0, transparent 30%), #0b1712; }
+
+/* Custom Scrollbar for Terminal / Monospace tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3B3B;
+}
+
+/* Pulse animation for live indicators */
+@keyframes pulse-red {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(255, 59, 59, 0.8);
+  }
+  50% {
+    opacity: 0.4;
+    box-shadow: 0 0 2px rgba(255, 59, 59, 0.2);
+  }
+}
+
+.animate-pulse-red {
+  animation: pulse-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Table styling for dark SOC theme */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #888888;
+  border-bottom: 1px solid #2A2A2A;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+td {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #1A1A1A;
+  padding: 0.65rem 1rem;
+}
+
+tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+tr.flagged-threat {
+  background-color: rgba(255, 59, 59, 0.08);
+}

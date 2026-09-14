@@ -1,0 +1,10 @@
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+DATASET/
+models/
+*.model

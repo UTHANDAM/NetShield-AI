@@ -1,0 +1,10 @@
+'use client';
+import { useEffect, useState } from 'react';
+import { Users, ScrollText } from 'lucide-react';
+import { api } from '../../../lib/api';
+
+export default function TeamPage() {
+  const [users, setUsers] = useState([]); const [audit, setAudit] = useState([]); const [error, setError] = useState('');
+  useEffect(() => { Promise.all([api.platform.users(), api.platform.audit()]).then(([people, events]) => { setUsers(people); setAudit(events); }).catch((e) => setError('Team and audit data requires an Administrator or SOC Manager account.')); }, []);
+  return <div className="mx-auto max-w-6xl space-y-6"><div><p className="font-mono text-xs uppercase tracking-[.2em] text-safe">Shared operations</p><h1 className="mt-2 text-3xl font-semibold">Team & audit trail</h1><p className="mt-2 text-sm text-text-muted">A single demonstration workspace with role-aware access and persistent activity evidence.</p></div>{error && <div className="rounded border border-warning/40 bg-warning/10 p-4 text-sm text-warning">{error}</div>}<div className="grid gap-6 lg:grid-cols-2"><section className="rounded-xl border border-border bg-card p-5"><h2 className="flex items-center gap-2 font-semibold"><Users className="h-5 w-5 text-safe" /> Registered operators</h2><div className="mt-5 space-y-3">{users.map((u) => <div key={u.id} className="flex items-center justify-between rounded bg-surface p-3"><div><p className="text-sm font-medium">{u.name}</p><p className="font-mono text-xs text-text-muted">{u.email}</p></div><span className="rounded border border-safe/30 px-2 py-1 font-mono text-[10px] uppercase text-safe">{u.role.replace('_', ' ')}</span></div>)}</div></section><section className="rounded-xl border border-border bg-card p-5"><h2 className="flex items-center gap-2 font-semibold"><ScrollText className="h-5 w-5 text-safe" /> Latest evidence</h2><div className="mt-5 space-y-3">{audit.map((event) => <div key={event.id} className="border-b border-border pb-3"><p className="text-sm">{event.action}</p><p className="mt-1 font-mono text-xs text-text-muted">{event.actor} · {event.resource_type}</p></div>)}</div></section></div></div>;
+}

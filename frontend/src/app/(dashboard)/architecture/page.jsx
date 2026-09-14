@@ -1,0 +1,10 @@
+import { ArrowDown, Database, Radar, ShieldCheck, Workflow } from 'lucide-react';
+
+const stages = [
+  ['Traffic intake', 'Dataset replay and controlled attack scenarios', Workflow],
+  ['Feature plane', 'Validation, normalisation, and common flow schema', Database],
+  ['Detection core', 'XGBoost classification + Isolation Forest anomaly evidence', Radar],
+  ['SOC response', 'Risk score, alert correlation, incident timeline, audit report', ShieldCheck],
+];
+export default function ArchitecturePage() { return <div className="mx-auto max-w-5xl"><p className="font-mono text-xs uppercase tracking-[.2em] text-safe">In-product system map</p><h1 className="mt-2 text-3xl font-semibold">Architecture & data flow</h1><p className="mt-3 max-w-3xl text-sm leading-6 text-text-muted">The cloud demo never captures live packets. It transforms approved dataset samples and explicit simulations into visible, reviewable SOC evidence.</p><div className="mt-8 space-y-2">{stages.map(([title, body, Icon], index) => <div key={title}><article className="flex gap-5 rounded-xl border border-border bg-card p-6"><div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-safe/10 text-safe"><Icon className="h-5 w-5" /></div><div><span className="font-mono text-xs text-warning">0{index + 1}</span><h2 className="mt-1 text-lg font-semibold">{title}</h2><p className="mt-1 text-sm text-text-muted">{body}</p></div></article>{index < stages.length - 1 && <div className="flex justify-center py-2 text-safe"><ArrowDown className="h-5 w-5" /></div>}</div>)}</div><div className="mt-8 grid gap-4 md:grid-cols-3"><Card title="Frontend" body="Next.js dashboard, typed API client, WebSocket telemetry." /><Card title="API & security" body="FastAPI, JWT/RBAC, validation, audit events, strict CORS." /><Card title="Storage" body="PostgreSQL in production; SQLite available for local development." /></div></div>; }
+function Card({title, body}) { return <div className="rounded-xl border border-border bg-surface p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-text-muted">{body}</p></div>; }
