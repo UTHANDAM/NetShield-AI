@@ -1,0 +1,190 @@
+{
+  "schema": "autoclaw.contextPack.v1",
+  "markdown_path": ".autoclaw/orchestrator/sprints/next-claude-code.context.md",
+  "generated_at": "2026-09-15T05:02:13.354Z",
+  "workspace_root_hash": "bc2c5d54728409b4",
+  "scope": {
+    "task": "Next available work for claude-code: Auto-dispatched by orchestrator-loop. Agent claude-code is idle.",
+    "agent_id": "claude-code",
+    "sprint": 1,
+    "task_ids": [
+      "next-claude-code"
+    ]
+  },
+  "mode": "balanced",
+  "query_mode": "balanced",
+  "degraded": true,
+  "notes": [
+    "Code retrieval unavailable (vector backend degraded).",
+    "mode: balanced",
+    "query-mode: balanced"
+  ],
+  "evidence": [
+    {
+      "id": "kg:0",
+      "kind": "kg",
+      "source_ref": "kg:dispatch:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code-1789390318572-5ec1e88b",
+      "score": 0.25,
+      "captured_at": "2026-09-14T12:52:06.257Z",
+      "freshness": "current",
+      "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+    },
+    {
+      "id": "kg:1",
+      "kind": "kg",
+      "source_ref": "kg:evt:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code:progress:next-claude-code-1789390318572-5ec1e88b",
+      "score": 0.25,
+      "captured_at": "2026-09-14T12:52:06.558Z",
+      "freshness": "current",
+      "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+    },
+    {
+      "id": "kg:2",
+      "kind": "kg",
+      "source_ref": "kg:dispatch:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code-1789390328754-07a3c4e8",
+      "score": 0.25,
+      "captured_at": "2026-09-14T12:52:40.918Z",
+      "freshness": "current",
+      "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+    },
+    {
+      "id": "kg:3",
+      "kind": "kg",
+      "source_ref": "kg:evt:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code:progress:next-claude-code-1789390328754-07a3c4e8",
+      "score": 0.25,
+      "captured_at": "2026-09-14T12:52:41.269Z",
+      "freshness": "current",
+      "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+    },
+    {
+      "id": "kg:4",
+      "kind": "kg",
+      "source_ref": "kg:dispatch:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code-1789448531686-a5eb725e",
+      "score": 0.25,
+      "captured_at": "2026-09-15T05:02:12.563Z",
+      "freshness": "current",
+      "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+    },
+    {
+      "id": "kg:5",
+      "kind": "kg",
+      "source_ref": "kg:evt:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code:progress:next-claude-code-1789448531686-a5eb725e",
+      "score": 0.25,
+      "captured_at": "2026-09-15T05:02:13.013Z",
+      "freshness": "current",
+      "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+    }
+  ],
+  "hashes": [
+    {
+      "evidence_id": "kg:0",
+      "content_hash": "d5343e5c8a770545bfd22635ec56c1cfd771b06247bd59fda60e8eeed56d9880",
+      "source_hash": "25c6a8f8e33c3f54163e881dfe298a2653668f9d00011c6cfb0fe4d3a0c0ccac"
+    },
+    {
+      "evidence_id": "kg:1",
+      "content_hash": "d5343e5c8a770545bfd22635ec56c1cfd771b06247bd59fda60e8eeed56d9880",
+      "source_hash": "9d62ac523083fa9aa4576214a18d59d176bbc35b3a490398b570538e453623b6"
+    },
+    {
+      "evidence_id": "kg:2",
+      "content_hash": "d5343e5c8a770545bfd22635ec56c1cfd771b06247bd59fda60e8eeed56d9880",
+      "source_hash": "462140b05df8af3f657ccdab440b112f676d0f961f65626002fbb26ca3127746"
+    },
+    {
+      "evidence_id": "kg:3",
+      "content_hash": "d5343e5c8a770545bfd22635ec56c1cfd771b06247bd59fda60e8eeed56d9880",
+      "source_hash": "82f34446e125f6dc6e6cf29e4b326f3f2045a17601379eb87c5ed1a5ae429866"
+    },
+    {
+      "evidence_id": "kg:4",
+      "content_hash": "d5343e5c8a770545bfd22635ec56c1cfd771b06247bd59fda60e8eeed56d9880",
+      "source_hash": "d923ebf8e083671239b13455923cc8d0b2b0c3985509f521647d5cc28ab532a9"
+    },
+    {
+      "evidence_id": "kg:5",
+      "content_hash": "d5343e5c8a770545bfd22635ec56c1cfd771b06247bd59fda60e8eeed56d9880",
+      "source_hash": "4cf9bcbe5efee5b76cbf57d0f2a985e828798c7f89a146c02f2fae9cd2f00fb8"
+    }
+  ],
+  "summary": {
+    "task": "Next available work for claude-code: Auto-dispatched by orchestrator-loop. Agent claude-code is idle.",
+    "agent_id": "claude-code",
+    "sprint": 1,
+    "task_ids": [
+      "next-claude-code"
+    ],
+    "used_code": false,
+    "code_hits": 0,
+    "learning_hits": 0,
+    "kg_hits": 6,
+    "degraded": true,
+    "notes": [
+      "Code retrieval unavailable (vector backend degraded).",
+      "mode: balanced",
+      "query-mode: balanced"
+    ],
+    "generated_at": "2026-09-15T05:02:13.354Z",
+    "mode": "balanced",
+    "spine_block_ids": [
+      "ctx:c:/users/uthandam/desktop/netshield-ai:project:root"
+    ],
+    "query_mode": "balanced",
+    "evidence": [
+      {
+        "id": "kg:0",
+        "kind": "kg",
+        "source_ref": "kg:dispatch:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code-1789390318572-5ec1e88b",
+        "score": 0.25,
+        "captured_at": "2026-09-14T12:52:06.257Z",
+        "freshness": "current",
+        "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+      },
+      {
+        "id": "kg:1",
+        "kind": "kg",
+        "source_ref": "kg:evt:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code:progress:next-claude-code-1789390318572-5ec1e88b",
+        "score": 0.25,
+        "captured_at": "2026-09-14T12:52:06.558Z",
+        "freshness": "current",
+        "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+      },
+      {
+        "id": "kg:2",
+        "kind": "kg",
+        "source_ref": "kg:dispatch:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code-1789390328754-07a3c4e8",
+        "score": 0.25,
+        "captured_at": "2026-09-14T12:52:40.918Z",
+        "freshness": "current",
+        "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+      },
+      {
+        "id": "kg:3",
+        "kind": "kg",
+        "source_ref": "kg:evt:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code:progress:next-claude-code-1789390328754-07a3c4e8",
+        "score": 0.25,
+        "captured_at": "2026-09-14T12:52:41.269Z",
+        "freshness": "current",
+        "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+      },
+      {
+        "id": "kg:4",
+        "kind": "kg",
+        "source_ref": "kg:dispatch:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code-1789448531686-a5eb725e",
+        "score": 0.25,
+        "captured_at": "2026-09-15T05:02:12.563Z",
+        "freshness": "current",
+        "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+      },
+      {
+        "id": "kg:5",
+        "kind": "kg",
+        "source_ref": "kg:evt:C:/Users/UTHANDAM/Desktop/netshield ai:next-claude-code:progress:next-claude-code-1789448531686-a5eb725e",
+        "score": 0.25,
+        "captured_at": "2026-09-15T05:02:13.013Z",
+        "freshness": "current",
+        "included_reason": "durable KG fact ranked by hybrid fusion (balanced)"
+      }
+    ]
+  }
+}
