@@ -1,6 +1,6 @@
 const API_BASE_URL = typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_API_URL 
   ? `${process.env.NEXT_PUBLIC_API_URL}/api`
-  : 'http://localhost:8000/api';
+  : 'https://netshield-ai-2.onrender.com/api';
 
 /**
  * Helper to get the auth token from local storage
