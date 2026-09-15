@@ -24,7 +24,9 @@ class Settings(BaseSettings):
     # SQLite (zero-setup, no Docker needed)
     DATABASE_PATH: str = str(_PROJECT_ROOT / "netshield.db")
     DATABASE_URL_OVERRIDE: str | None = None
-    CORS_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000"
+    # Include the production Vercel UI by default. Hosts can still override
+    # this value with CORS_ORIGINS in their environment configuration.
+    CORS_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000,https://net-shield-ai-one.vercel.app"
     WEBHOOK_ALLOWLIST: str = ""
 
     @property

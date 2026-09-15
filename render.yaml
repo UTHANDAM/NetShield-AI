@@ -16,7 +16,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: CORS_ORIGINS
-        sync: false
+        value: https://net-shield-ai-one.vercel.app
 databases:
   - name: netshield-postgres
     databaseName: netshield
